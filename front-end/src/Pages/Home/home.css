@@ -1,0 +1,75 @@
+.container {
+  width: 100%;
+  min-height: 670px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgb(2, 3, 7), 0.4;
+}
+.container img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 95%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.swiper-slide {
+  font-size: 18px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 60px;
+}
+
+.swiper-pagination-clickable {
+  top: 90% !important;
+}
+.swiper-pagination-bullet {
+  width: 6px !important;
+  height: 5px !important;
+  border-radius: 0.2rem !important;
+  background: var(--bodyColor) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 1.5rem !important;
+  background: var(--hover) !important;
+}
+
+.home-text {
+  z-index: 1000;
+  padding: 0 150px;
+  position: absolute;
+  top: 50%;
+}
+
+.home-text span {
+  color: var(--text-color);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.home-text h1 {
+  color: var(--text-color);
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.mySwiper .slidercard-item {
+  display: block;
+  width: 400px;
+  height: 380px;
+  object-fit: cover;
+  user-select: none;
+}
