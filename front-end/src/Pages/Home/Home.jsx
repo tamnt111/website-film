@@ -3,6 +3,7 @@ import "./home.css";
 import { Slider } from "../../Components/Slider";
 import slides from "../../data/mock.json";
 import MovieSlider from "../../Components/MovieSlider";
+import PopupFilm from "../../Components/PopupFilm";
 const Home = () => {
   return (
     <>
@@ -10,8 +11,9 @@ const Home = () => {
         <Slider slides={slides} />
       </section>
       <MovieSlider />
-      <MovieSlider />
-      <MovieSlider />
+      {/* <MovieSlider />
+      <MovieSlider /> */}
+      {/* <PopupFilm /> */}
     </>
   );
 };

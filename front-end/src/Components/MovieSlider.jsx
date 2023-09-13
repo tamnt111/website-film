@@ -33,7 +33,17 @@ const MovieSlider = () => {
       SmoothHorizontalScrolling(
         sliderRef.current,
         250,
-        movieRef.current.clientWidth,
+        movieRef.current.clientWidth * 2,
+        sliderRef.current.scrollLeft
+      );
+    }
+  };
+  const handleScrollLeft = () => {
+    if (sliderRef.current.scrollLeft > 0) {
+      SmoothHorizontalScrolling(
+        sliderRef.current,
+        250,
+        -movieRef.current.clientWidth * 2,
         sliderRef.current.scrollLeft
       );
     }
@@ -53,7 +63,7 @@ const MovieSlider = () => {
       <div className="btnright" onClick={handleScrollRight}>
         <BiSolidRightArrow />
       </div>
-      <div className="btnleft">
+      <div className="btnleft" onClick={handleScrollLeft}>
         <BiSolidLeftArrow />
       </div>
     </Moviecontainer>

@@ -21,6 +21,7 @@
     rgb(0, 0, 0, 1),
     rgba(0, 0, 0, 0)
   );
+  background: blur(20px);
 }
 
 .swiper-slide {
@@ -72,4 +73,23 @@
   height: 380px;
   object-fit: cover;
   user-select: none;
+}
+.popup {
+  height: 400px;
+  width: 50%;
+  height: 70%;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  top: 20%;
+  right: 25%;
+  z-index: 1;
+  border-radius: 50px;
+}
+.popup-item h1 {
+  padding: 25px;
+  top: 20px;
 }

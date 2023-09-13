@@ -1,0 +1,97 @@
+.auth-form {
+  backdrop-filter: blur(10px);
+  background-color: rgba(247, 247, 247, 0.579);
+  height: 580px;
+  width: 20%;
+  right: 5%;
+  top: 110%;
+  position: absolute;
+  border-radius: 4%;
+}
+.auth-form.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: var(--speed) ease;
+}
+.auth-form.inactive {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: var(--speed) ease;
+}
+.auth-form-header {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 60px;
+}
+.auth-form-dangky {
+  font-size: 1.5rem;
+  font-weight: 4000;
+  cursor: pointer;
+}
+.auth-form-dangnhap {
+  font-size: 1rem;
+  cursor: pointer;
+  color: rgb(238, 51, 51);
+}
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+}
+.input-group input {
+  margin: 20px;
+  padding: 6px;
+  width: 70%;
+}
+.btn-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.btn-controls .btndangky {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  border-radius: 5px;
+}
+.btn-controls .btndangnhap {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  border-radius: 5px;
+}
+.btn-controls a {
+  position: absolute;
+  top: 37.5%;
+  right: 20%;
+  font-size: 14px;
+}
+.tabs {
+  cursor: pointer;
+  padding: auto;
+  color: rgb(0, 0, 0);
+  color: white;
+  margin: 40px;
+}
+.active-tabs {
+  font-size: 1.5rem;
+  color: rgb(255, 0, 0);
+  transition: 0.1s ease-in;
+  margin: 20px;
+}
+.bloc-tabs {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(128, 128, 128, 0.023);
+}
+.content {
+  display: none;
+}
+.active-content {
+  display: block;
+}
