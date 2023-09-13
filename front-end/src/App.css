@@ -57,7 +57,7 @@ body {
 }
 
 .container {
-  max-width: 93%;
+  /* max-width: 93%; */
   margin: auto;
 }
 
