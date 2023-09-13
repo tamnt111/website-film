@@ -77,9 +77,9 @@ const Moviecontainer = styled.div`
   color: white;
   user-select: none;
   .btnright {
-    position: absolute;
-    top: 107%;
     left: 96.5%;
+    position: absolute;
+    top: 101%;
     z-index: 40;
     padding: 10px;
     transform-origin: center;
@@ -94,8 +94,8 @@ const Moviecontainer = styled.div`
   }
   .btnleft {
     position: absolute;
-    top: 107%;
-    left: 1.6%;
+    top: 101%;
+    left: 1.1%;
     z-index: 40;
     padding: 10px;
     transform-origin: center;
@@ -123,7 +123,7 @@ const Moviecontainer = styled.div`
   }
   .btnright {
     position: absolute;
-    top: 107%;
+    top: 101%;
     right: 1.6%;
     z-index: 40;
     padding: 10px;
