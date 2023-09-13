@@ -56,9 +56,10 @@ body {
   width: 0px;
 }
 
-.container {
-  /* max-width: 93%; */
+.Body-container {
+  max-width: 93%;
   margin: auto;
+  margin-top: 79px;
 }
 
 /*  */

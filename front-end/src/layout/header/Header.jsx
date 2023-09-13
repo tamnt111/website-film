@@ -31,7 +31,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/phimbo">Amine</Link>
+            <Link to="/anime">Amine</Link>
           </li>
           <li>
             <Link to="/quocgia">Phim Bộ</Link>

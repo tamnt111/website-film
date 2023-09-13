@@ -20,7 +20,7 @@ const movies = [
   "https://img.posterstore.com/zoom/wb0038-8batman-downpour50x70-83763-44377.jpg",
 ];
 
-function MovieSlider (props)  {
+function MovieSlider(props) {
   const sliderRef = useRef();
   const movieRef = useRef();
   const [dragDown, setDragDown] = useState(0);
@@ -47,14 +47,14 @@ function MovieSlider (props)  {
     }
   }, [dragDown, dragMove, isDrag]);
 
-  const onDragStart = e => {
+  const onDragStart = (e) => {
     setIsDrag(true);
     setDragDown(e.screenX);
   };
-  const onDragEnd = e => {
+  const onDragEnd = (e) => {
     setIsDrag(false);
   };
-  const onDragEnter = e => {
+  const onDragEnter = (e) => {
     setDragMove(e.screenX);
   };
 
@@ -100,7 +100,7 @@ function MovieSlider (props)  {
       </div>
     </Moviecontainer>
   );
-};
+}
 
 export default MovieSlider;
 
@@ -110,11 +110,11 @@ const Moviecontainer = styled.div`
   color: white;
   user-select: none;
   max-height: 90%;
-  
+
   .btnleft {
     position: relative;
     top: -310px;
-    left: 1.1%;   
+    left: 1.1%;
     z-index: 40;
     padding: 10px;
     transform-origin: center;
@@ -143,7 +143,7 @@ const Moviecontainer = styled.div`
   .btnright {
     position: relative;
     top: -240px;
-    left: 97%;   
+    left: 97%;
     z-index: 40;
     padding: 10px;
     transform-origin: center;
@@ -195,7 +195,6 @@ const Movieslider = styled.div`
     user-select: none;
     border-radius: 5px;
     transform: center left;
-    position: relative;
 
     &:hover {
       opacity: 1;
