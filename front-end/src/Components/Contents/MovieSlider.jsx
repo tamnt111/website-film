@@ -1,8 +1,7 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { BiSolidRightArrow, BiSolidLeftArrow } from "react-icons/bi";
-
-import { SmoothHorizontalScrolling } from "../utils/index";
+import { SmoothHorizontalScrolling } from "../../utils/index";
 const movies = [
   "https://img.posterstore.com/zoom/wb0038-8batman-downpour50x70-83763-44377.jpg",
   "https://img.posterstore.com/zoom/wb0038-8batman-downpour50x70-83763-44377.jpg",
@@ -21,9 +20,12 @@ const movies = [
   "https://img.posterstore.com/zoom/wb0038-8batman-downpour50x70-83763-44377.jpg",
 ];
 
-const MovieSlider = () => {
+function MovieSlider (props)  {
   const sliderRef = useRef();
   const movieRef = useRef();
+  const [dragDown, setDragDown] = useState(0);
+  const [dragMove, setDragMove] = useState(0);
+  const [isDrag, setIsDrag] = useState(false);
 
   const handleScrollRight = () => {
     const maxScrollLeft =
@@ -38,6 +40,24 @@ const MovieSlider = () => {
       );
     }
   };
+  useEffect(() => {
+    if (isDrag) {
+      if (dragMove < dragDown) handleScrollRight();
+      if (dragMove > dragDown) handleScrollLeft();
+    }
+  }, [dragDown, dragMove, isDrag]);
+
+  const onDragStart = e => {
+    setIsDrag(true);
+    setDragDown(e.screenX);
+  };
+  const onDragEnd = e => {
+    setIsDrag(false);
+  };
+  const onDragEnter = e => {
+    setDragMove(e.screenX);
+  };
+
   const handleScrollLeft = () => {
     if (sliderRef.current.scrollLeft > 0) {
       SmoothHorizontalScrolling(
@@ -48,13 +68,25 @@ const MovieSlider = () => {
       );
     }
   };
+
   return (
-    <Moviecontainer>
+    <Moviecontainer draggable="false">
       <h1 className="tilte-phim">Phim nổi bật</h1>
-      <Movieslider ref={sliderRef}>
+      <Movieslider
+        ref={sliderRef}
+        draggable="true"
+        onDragStart={onDragStart}
+        onDragEnd={onDragEnd}
+        onDragEnter={onDragEnter}
+      >
         {movies.map((movie, index) => (
-          <div className="movie-slider-item" key={index} ref={movieRef}>
-            <img src={movie}></img>
+          <div
+            className="movie-slider-item"
+            key={index}
+            ref={movieRef}
+            draggable="false"
+          >
+            <img src={movie} draggable="false" />
 
             <div className="movie-name">Batman</div>
           </div>
@@ -74,28 +106,15 @@ export default MovieSlider;
 
 const Moviecontainer = styled.div`
   padding: 20px 20px 0;
+  margin-bottom: -8%;
   color: white;
   user-select: none;
-  .btnright {
-    left: 96.5%;
-    position: absolute;
-    top: 101%;
-    z-index: 40;
-    padding: 10px;
-    transform-origin: center;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 10%;
-    width: 2%;
-    border-radius: 7px;
-    display: flex;
-    align-items: center;
-    transform: translateY(-35%);
-  }
+  max-height: 90%;
+  
   .btnleft {
-    position: absolute;
-    top: 101%;
-    left: 1.1%;
+    position: relative;
+    top: -310px;
+    left: 1.1%;   
     z-index: 40;
     padding: 10px;
     transform-origin: center;
@@ -122,9 +141,9 @@ const Moviecontainer = styled.div`
     }
   }
   .btnright {
-    position: absolute;
-    top: 101%;
-    right: 1.6%;
+    position: relative;
+    top: -240px;
+    left: 97%;   
     z-index: 40;
     padding: 10px;
     transform-origin: center;

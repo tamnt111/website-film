@@ -2,7 +2,7 @@ import React from "react";
 import "./home.css";
 import { Slider } from "../../Components/Slider";
 import slides from "../../data/mock.json";
-import MovieSlider from "../../Components/MovieSlider";
+import Content from '../../Components/Contents/Content'
 import PopupFilm from "../../Components/PopupFilm";
 const Home = () => {
   return (
@@ -10,9 +10,7 @@ const Home = () => {
       <section className="home " id="home">
         <Slider slides={slides} />
       </section>
-      <MovieSlider />
-      {/* <MovieSlider />
-      <MovieSlider /> */}
+        <Content/>
       {/* <PopupFilm /> */}
     </>
   );
