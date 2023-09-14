@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { BiSolidRightArrow, BiSolidLeftArrow } from "react-icons/bi";
 import { SmoothHorizontalScrolling } from "../../utils/index";
+import { FaCircle } from "react-icons/fa";
 const movies = [
   "https://img.posterstore.com/zoom/wb0038-8batman-downpour50x70-83763-44377.jpg",
   "https://img.posterstore.com/zoom/wb0038-8batman-downpour50x70-83763-44377.jpg",
@@ -86,6 +87,8 @@ function MovieSlider(props) {
             ref={movieRef}
             draggable="false"
           >
+            <FaCircle />
+            <h2>10</h2>
             <img src={movie} draggable="false" />
 
             <div className="movie-name">Batman</div>
@@ -200,6 +203,37 @@ const Movieslider = styled.div`
       opacity: 1;
       transform: scale(1.1);
       z-index: 10;
+      transition: 0.7s;
+      svg {
+        color: var(--hover);
+        position: absolute;
+        font-size: 70px;
+        top: 20px;
+        left: 210px;
+        opacity: 1;
+      }
+      h2 {
+        position: absolute;
+        font-size: 40px;
+        top: 28px;
+        left: 224px;
+        opacity: 1;
+      }
+    }
+    svg {
+      color: var(--hover);
+      position: absolute;
+      font-size: 70px;
+      top: 20px;
+      left: 210px;
+      opacity: 0;
+    }
+    h2 {
+      position: absolute;
+      font-size: 40px;
+      top: 28px;
+      left: 224px;
+      opacity: 0;
     }
     img {
       width: 100%;
