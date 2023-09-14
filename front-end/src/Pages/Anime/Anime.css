@@ -49,12 +49,59 @@
   width: 90%;
   transform: scale(1);
   transition: all 0.3s linear;
+  position: relative;
 }
-.content-left-item-card img:hover {
+/* .content-left-item-card img:hover {
   transform: scale(1.1);
   box-shadow: 0 0 0 1px rgb(247, 247, 247);
+} */
+.title-card h1 {
+  color: white;
+  margin-left: 70px;
+  margin-top: 5px;
+  font-size: 17px;
+  user-select: none;
 }
-
+.episode-card svg {
+  position: absolute;
+  z-index: 20;
+  color: var(--hover);
+  left: 215px;
+  top: 140px;
+  font-size: 50px;
+  user-select: none;
+}
+.episode-card h1 {
+  position: absolute;
+  z-index: 21;
+  left: 226px;
+  top: 147px;
+  font-size: 25px;
+  color: white;
+  user-select: none;
+}
+.overlay {
+  position: absolute;
+  width: 203px;
+  height: 278px;
+  top: 123px;
+  /* background: rgba(0, 0, 0, 0.14); */
+  opacity: 0;
+}
+.overlay:hover {
+  opacity: 1;
+  background: rgb(0, 0, 0, 0.3);
+  transition: 0.4s;
+  box-shadow: 0 0 0 1px rgba(251, 251, 251, 0.714);
+  cursor: pointer;
+}
+.overlay svg {
+  font-size: 50px;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 110px;
+  left: 80px;
+}
 .content-left-item {
   display: flex;
   flex-wrap: wrap;
@@ -71,7 +118,43 @@
   display: flex;
   justify-content: center;
   margin: 10px;
+  justify-items: center;
+}
+.header-right {
 }
 .header-right h1 {
   color: white;
+  justify-content: center;
+  display: flex;
+  margin: 10px;
+  user-select: none;
+}
+.header-right a {
+  color: white;
+  font-size: 25px;
+  align-items: center;
+  margin: 25px;
+}
+.header-right a:hover {
+  color: var(--hover);
+}
+.header-right-item {
+  height: 100%;
+}
+.header-right .h1 {
+  font-size: 40px;
+}
+.card-right {
+  display: flex;
+}
+.card-right img {
+  width: 30%;
+  margin: 20px;
+  opacity: 1;
+}
+.card-right img:hover {
+}
+.card-right h2 {
+  color: white;
+  margin-top: 30px;
 }
