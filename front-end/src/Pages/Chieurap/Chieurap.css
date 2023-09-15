@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
 }
+/* chia trang */
 .header-left span {
   font-size: 30px;
   margin: 20px;
@@ -34,11 +35,11 @@
 }
 .Content-left {
   width: 70%;
-  /* background: rgb(194, 109, 109); */
   border: 2px solid rgb(159, 159, 167);
   margin-right: 5px;
   margin-top: 20px;
 }
+/* Thể chứa card phim */
 .content-left-item-card {
   width: 19%;
   margin: 5px;
@@ -51,10 +52,7 @@
   transition: all 0.3s linear;
   position: relative;
 }
-/* .content-left-item-card img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 0 1px rgb(247, 247, 247);
-  } */
+/* Tên phim */
 .title-card h1 {
   color: white;
   margin-left: 70px;
@@ -62,29 +60,14 @@
   font-size: 17px;
   user-select: none;
 }
-.episode-card svg {
-  position: absolute;
-  z-index: 20;
-  color: var(--hover);
-  left: 225px;
-  top: 140px;
-  font-size: 50px;
-  user-select: none;
-}
-.episode-card h1 {
-  position: absolute;
-  z-index: 21;
-  left: 236px;
-  top: 147px;
-  font-size: 25px;
-  color: white;
-  user-select: none;
-}
+/* Icon tập phim */
+
+/* overlay sau khi hover vô card */
 .overlay {
   position: absolute;
   width: 214px;
   height: 298px;
-  top: 123px;
+  top: 172px;
   /* background: rgba(0, 0, 0, 0.14); */
   opacity: 0;
 }
@@ -94,6 +77,7 @@
   transition: 0.4s;
   box-shadow: 0 0 0 1px rgba(251, 251, 251, 0.714);
   cursor: pointer;
+  top: 172px;
 }
 .overlay svg {
   font-size: 50px;
@@ -107,6 +91,7 @@
   flex-wrap: wrap;
   margin-left: 10px;
 }
+/* bảng xếp hạng */
 .Content-right {
   width: 30%;
   /* background: rgb(54, 96, 54); */
@@ -120,8 +105,7 @@
   margin: 10px;
   justify-items: center;
 }
-.header-right {
-}
+
 .header-right h1 {
   color: white;
   justify-content: center;

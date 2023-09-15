@@ -11,11 +11,10 @@ header {
   transition: 1;
 }
 
-header.showdown{
-    background: var(--blackColor);
-  }
-  
-
+header.showdown {
+  background: var(--blackColor);
+  transition: 0.7s;
+}
 
 .logo {
   font-size: 1.1rem;
@@ -94,6 +93,7 @@ header.showdown{
 /* Search */
 .search {
   width: 30%;
+
   position: relative;
   display: flex;
   justify-content: flex-end; /* Đẩy nội dung sang bên phải */
@@ -105,7 +105,7 @@ header.showdown{
   margin-right: 20px;
 }
 
-.search .icon{
+.search .icon {
   border: 2px solid var(--whiteColor);
   border-radius: 50%;
   width: 37px;
@@ -115,18 +115,16 @@ header.showdown{
   align-items: center;
 }
 
-
-
-.search.active-search{
+.search.active-search {
   color: var(--blackColor);
 }
 
-
-.searchBox{
+.searchBox {
   position: absolute;
   right: -100%;
   width: 100%;
   height: 100%;
+  top: 70px;
   display: flex;
   background: #fff;
   align-items: center;
@@ -134,28 +132,29 @@ header.showdown{
   transition: 0.5s ease-in-out;
 }
 
-.searchBox.active-search{
+.searchBox.active-search {
   position: absolute;
   right: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
+  top: 70px;
   display: flex;
-  background: #fff;
+  background: #f7f7f7;
   align-items: center;
   padding: 0 30px;
   transition: 0.5s ease-in-out;
 }
 
-.searchBox input{
+.searchBox input {
   width: 100%;
   border: none;
   outline: none;
   height: 50px;
   font-size: 1.25em;
   background: #fff;
-  border-bottom: 1px solid rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
-.search svg:first-child{
+.search svg:first-child {
   font-size: 3rem;
   position: relative;
   left: 3.5px;
@@ -163,26 +162,26 @@ header.showdown{
   transition: 0.5s ease-in-out;
 }
 
-.search svg:first-child:hover{
+.search svg:first-child:hover {
   color: var(--hover);
 }
 
-.search svg:last-child{
+.search svg:last-child {
   opacity: 0;
   visibility: hidden;
   scale: 0;
   transform: 0.5s;
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px) {
   header {
     padding: 12px 4%;
   }
-  header.shadow .menu-icon{
+  header.shadow .menu-icon {
     color: var(--blackColor);
   }
 
-  .menu-icon{
+  .menu-icon {
     width: 100%;
     position: relative;
     display: flex;
@@ -190,7 +189,7 @@ header.showdown{
     align-items: center;
     justify-content: flex-end;
   }
-  .navbar{
+  .navbar {
     position: absolute;
     top: -570px;
     left: 0;
@@ -203,19 +202,19 @@ header.showdown{
     transition: 0.5s all linear;
     text-align: center;
   }
-  .navbar a{
+  .navbar a {
     color: var(--blackColor);
   }
 
-  .navbar a:hover{
+  .navbar a:hover {
     padding-bottom: 5px;
     color: var(--hover);
     border-bottom: 2px solid var(--hover);
   }
-  .navbar a::after{
+  .navbar a::after {
     display: none;
   }
-  .navbar.active{
+  .navbar.active {
     top: 100%;
   }
 
@@ -224,5 +223,4 @@ header.showdown{
     width: 100%;
     justify-content: flex-end;
   }
-
 }

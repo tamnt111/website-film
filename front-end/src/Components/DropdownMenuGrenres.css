@@ -1,0 +1,47 @@
+.navbar-body {
+  width: 100%;
+  height: 50px;
+}
+.dropdown-menu {
+  position: relative;
+  z-index: 10;
+  top: 20px;
+  left: 40px;
+}
+.dropdown-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Style for the dropdown list */
+.dropdown-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  /* display: none; */
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Style for each item in the dropdown list */
+.dropdown-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Change the background color of the item when hovered */
+.dropdown-list li:hover {
+  background-color: #f2f2f2;
+}
+
+/* Show the dropdown list when the button is clicked */
+.dropdown-menu-open .dropdown-list {
+  display: block;
+}
