@@ -198,27 +198,13 @@ const Movieslider = styled.div`
     user-select: none;
     border-radius: 5px;
     transform: center left;
+    user-select: none;
 
     &:hover {
       opacity: 1;
       transform: scale(1.1);
       z-index: 10;
       transition: 0.7s;
-      svg {
-        color: var(--hover);
-        position: absolute;
-        font-size: 70px;
-        top: 20px;
-        left: 210px;
-        opacity: 1;
-      }
-      h2 {
-        position: absolute;
-        font-size: 40px;
-        top: 28px;
-        left: 224px;
-        opacity: 1;
-      }
     }
     svg {
       color: var(--hover);
@@ -226,14 +212,14 @@ const Movieslider = styled.div`
       font-size: 70px;
       top: 20px;
       left: 210px;
-      opacity: 0;
+      opacity: 1;
     }
     h2 {
       position: absolute;
       font-size: 40px;
       top: 28px;
       left: 224px;
-      opacity: 0;
+      opacity: 1;
     }
     img {
       width: 100%;

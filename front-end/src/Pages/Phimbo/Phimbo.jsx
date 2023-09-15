@@ -1,10 +1,10 @@
 import React from "react";
-import "./Anime.css";
+import "./Phimbo.css";
 import { Link } from "react-router-dom";
 import { BsPlayCircleFill } from "react-icons/bs";
 import { FaCircle } from "react-icons/fa";
 import { HiMiniBookmark } from "react-icons/hi2";
-const Anime = () => {
+const Phimbo = () => {
   return (
     <div className="Body-container">
       <div className="Content">
@@ -109,4 +109,4 @@ const Anime = () => {
   );
 };
 
-export default Anime;
+export default Phimbo;

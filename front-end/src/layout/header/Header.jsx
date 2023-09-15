@@ -34,16 +34,16 @@ const Header = () => {
             <Link to="/anime">Amine</Link>
           </li>
           <li>
-            <Link to="/quocgia">Phim Bộ</Link>
+            <Link to="/phimbo">Phim Bộ</Link>
           </li>
           <li>
             <Link to="/phimle">Phim Lẻ</Link>
           </li>
           <li>
-            <Link to="/phimbo">Chiếu Rạp</Link>
+            <Link to="/chieurap">Chiếu Rạp</Link>
           </li>
           <li>
-            <Link to="/phimbo">Liên Hệ</Link>
+            <Link to="/lienhe">Liên Hệ</Link>
           </li>
         </ul>
         <Link className="btn" onClick={() => setopenProfile((prev) => !prev)}>

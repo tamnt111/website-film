@@ -52,9 +52,9 @@
   position: relative;
 }
 /* .content-left-item-card img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 0 1px rgb(247, 247, 247);
-} */
+    transform: scale(1.1);
+    box-shadow: 0 0 0 1px rgb(247, 247, 247);
+  } */
 .title-card h1 {
   color: white;
   margin-left: 70px;
