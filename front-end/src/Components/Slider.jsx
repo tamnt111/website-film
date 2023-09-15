@@ -38,10 +38,7 @@ export const Slider = ({ slides }) => {
               <AiOutlinePlayCircle />
             </Link>
           </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 6306f6cc4c465841c16473d62b8304c24c513fee
           <div className="slider-image">
             <img className="img-item" src={slide.image} alt={slide.image} />
           </div>
