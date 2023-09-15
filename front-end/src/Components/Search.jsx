@@ -1,19 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { AiOutlineSearch } from 'react-icons/ai'
+import { MdClear } from 'react-icons/md'
 
 const Search = () => {
-    return (
+    const [searchActive, setSearchActive] = useState(false);
 
-        <div>
-            <form>
-                <input
-                    type="text"
-                    autoComplete="off"
-                    name="text"
-                    placeholder="Tìm kiếm"
-                    className="input"
-                />
-            </form>
-        </div>
+    const handleIconClick = () => {
+        setSearchActive(!searchActive);
+    };
+
+    const handleClearClick = () => {
+        setSearchActive(false);
+    };
+
+    return (
+        <>
+            {/* <form> */}
+            <div className={`search ${searchActive ? 'active-search' : ''}`}>
+                <span className='icon'>
+                    <AiOutlineSearch onClick={handleIconClick} />
+                    <MdClear className={`${searchActive ? 'active-search' : ''}`} onClick={handleClearClick} />
+                </span>
+            </div>
+            <div className={`searchBox ${searchActive ? 'active-search' : ''}`}>
+                <input type="text" placeholder='Search' />
+            </div>
+            {/* </form> */}
+        </>
     )
 }
 
