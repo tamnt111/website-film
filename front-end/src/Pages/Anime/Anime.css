@@ -84,6 +84,7 @@
   box-shadow: 0 0 0 1px var(--hover);
   cursor: pointer;
   top: 0;
+  transform: translateX(0);
 }
 .overlay .Name {
   position: absolute;
@@ -93,6 +94,10 @@
   font-weight: 700;
   margin-top: 100px;
 }
+/* .overlay .Name:hover {
+  transform: translateX(-100px);
+  transition: 0.4s;
+} */
 .overlay .Star {
   font-family: "Courier New", Courier, monospace;
   top: 278px;
