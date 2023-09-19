@@ -1,6 +1,7 @@
 import "./header.css";
+import { NavLink, Link } from "react-router-dom";
 import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiSolidMoviePlay, BiSolidUser } from "react-icons/bi";
 import { CgMenuCake } from "react-icons/cg";
@@ -20,45 +21,55 @@ const Header = () => {
 
   const changeBackground = () => {
     if (window.scrollY >= 80) {
-      setNavbar(true)
+      setNavbar(true);
     } else {
-      setNavbar(false)
+      setNavbar(false);
     }
-  }
+  };
 
-  window.addEventListener('scroll', changeBackground);
+  window.addEventListener("scroll", changeBackground);
 
   return (
     <>
-      <header className={navbar ? 'showdown' : ''}>
+      <header className={navbar ? "showdown" : ""}>
         <Link className="logo" to="/">
           <BiSolidMoviePlay /> Movies
         </Link>
 
         <div className="menu-icon" onClick={toggleMobileMenu}>
-          {Mobile ? <FaTimes /> : <GiHamburgerMenu />}
+          {Mobile ? <FaTimes className="clear" /> : <GiHamburgerMenu />}
         </div>
 
-        <ul className={`navbar ${Mobile ? 'active' : ''}`} >
+        <ul className={`navbar ${Mobile ? "active" : ""}`}>
           <li>
-            <Link className="active" to="/">
+            <NavLink exact activeClassName="active" to="/">
               Trang Chủ
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/anime">Amine</Link>
+            <NavLink exact activeClassName="active" to="/anime">
+              Anime
+            </NavLink>
           </li>
           <li>
-            <Link to="/phimbo">Phim Bộ</Link>
+            <NavLink exact activeClassName="active" to="/phimbo">
+              Phim Bộ
+            </NavLink>
           </li>
           <li>
-            <Link to="/phimle">Phim Lẻ</Link>
+            <NavLink exact activeClassName="active" to="/phimle">
+              Phim Lẻ
+            </NavLink>
           </li>
           <li>
-            <Link to="/chieurap">Chiếu Rạp</Link>
+            <NavLink exact activeClassName="active" to="/chieurap">
+              Chiếu Rạp
+            </NavLink>
           </li>
           <li>
-            <Link to="/lienhe">Liên Hệ</Link>
+            <NavLink exact activeClassName="active" to="/lienhe">
+              Liên Hệ
+            </NavLink>
           </li>
         </ul>
         <Search />
@@ -66,9 +77,7 @@ const Header = () => {
           <BiSolidUser />
         </Link>
         {openProfile && <Dropdownprofile />}
-
       </header>
-
     </>
   );
 };

@@ -69,58 +69,7 @@ const Anime = () => {
             <span>Trang cuối</span>
           </div>
         </div>
-        <div className="Content-right">
-          <div className="Content-right-item">
-            <div className="header-right">
-              <div className="header-right-item">
-                <div className="header-right">
-                  <h1>Bảng xếp hạng</h1>
-                  <Link> Hot Tuần</Link>
-                  <Link> Hot Tháng</Link>
-                  <Link> Hot Năm</Link>
-                </div>
-                <div className="header-right-item">
-                  <div className="card-right">
-                    <h1> #1</h1>
-                    <HiMiniBookmark />
-                    <img src="https://img.posterstore.com/zoom/wb0038-8batman-downpour50x70-83763-44377.jpg" />
-                    <h2> Batman</h2>
-                  </div>
-                  <div className="card-right">
-                    <h1> #1</h1>
-                    <HiMiniBookmark />
-                    <img src="https://img.posterstore.com/zoom/wb0038-8batman-downpour50x70-83763-44377.jpg" />
-                    <h2> Batman</h2>
-                  </div>
-                  <div className="card-right">
-                    <h1> #1</h1>
-                    <HiMiniBookmark />
-                    <img src="https://img.posterstore.com/zoom/wb0038-8batman-downpour50x70-83763-44377.jpg" />
-                    <h2> Batman</h2>
-                  </div>
-                  <div className="card-right">
-                    <h1> #1</h1>
-                    <HiMiniBookmark />
-                    <img src="https://img.posterstore.com/zoom/wb0038-8batman-downpour50x70-83763-44377.jpg" />
-                    <h2> Batman</h2>
-                  </div>
-                  <div className="card-right">
-                    <h1> #1</h1>
-                    <HiMiniBookmark />
-                    <img src="https://img.posterstore.com/zoom/wb0038-8batman-downpour50x70-83763-44377.jpg" />
-                    <h2> Batman</h2>
-                  </div>
-                  <div className="card-right">
-                    <h1> #1</h1>
-                    <HiMiniBookmark />
-                    <img src="https://img.posterstore.com/zoom/wb0038-8batman-downpour50x70-83763-44377.jpg" />
-                    <h2> Batman</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="Content-right"></div>
       </div>
 
       {/* <img className='animeimg' src='https://img.posterstore.com/zoom/wb0038-8batman-downpour50x70-83763-44377.jpg'/> */}

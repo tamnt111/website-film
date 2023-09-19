@@ -136,68 +136,11 @@
 }
 /* bảng xếp hạng */
 .Content-right {
-  width: 30%;
-  /* background: rgb(54, 96, 54); */
+  width: 20%;
+
+  display: flex;
+  justify-content: center;
   border: 2px solid rgb(159, 159, 167);
   margin-left: 5px;
   margin-top: 20px;
-}
-.Content-right-item {
-  display: flex;
-  justify-content: center;
-  margin: 10px;
-  justify-items: center;
-}
-
-.header-right h1 {
-  color: white;
-  justify-content: center;
-  display: flex;
-  margin: 10px;
-  user-select: none;
-}
-.header-right a {
-  color: white;
-  font-size: 25px;
-  align-items: center;
-  margin: 25px;
-}
-.header-right a:hover {
-  color: var(--hover);
-}
-.header-right-item {
-  height: 100%;
-}
-.header-right .h1 {
-  font-size: 40px;
-}
-.card-right {
-  display: flex;
-}
-.card-right img {
-  width: 30%;
-
-  margin: 20px;
-  opacity: 1;
-}
-.card-right img:hover {
-}
-.card-right svg {
-  position: absolute;
-  color: var(--hover);
-  font-size: 50px;
-  top: 210px;
-  right: 545px;
-}
-.card-right h1 {
-  position: absolute;
-  font-size: 20px;
-  top: 210px;
-  right: 549px;
-  z-index: 1;
-}
-
-.card-right h2 {
-  color: white;
-  margin-top: 30px;
 }
